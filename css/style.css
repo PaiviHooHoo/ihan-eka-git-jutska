@@ -1,0 +1,154 @@
+/*Täällä on projektin tyylit, kaikki sivut samalla*/
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root{
+    --teksti: #333333;
+    --tausta: #eeeeee;
+    --teksti-vaalea:#dddddd;
+    --bg-dark: #444444;
+    --highligh: #87af19; /*tämä on esedun vihreä*/
+}
+
+*{
+    box-sizing: border-box;
+}
+/*yleiskäyttöinen vertikaalinen keskittäjä*/
+.v-center{
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+/*horisonttaalinen oikea tasaus*/
+.h-right{
+    position: absolute;
+    right: 0;
+}
+.highlight{
+    color: var(--highligh);
+    /*display: inline-block;
+    transform: rotate(20deg);*/
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: var(--tausta);
+    color: var(--teksti);
+}
+header{
+    background-color: var(--bg-dark);
+    color: var(--teksti-vaalea);
+    padding: 10px;
+    height: 100px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    border-bottom: var(--highligh)solid 5px;
+}
+header .logo{
+    float: left;
+    font-size: 2em;
+}
+
+header .logo img{
+    height: 70px;
+    padding: 5px;
+    display: block;
+    float: left;
+}
+
+header nav {
+    float: right;
+}
+
+header nav a{
+    display: inline-block;
+    font-size: 1.5em;
+    color: var(--teksti-vaalea);
+    text-decoration: none;
+    padding: 0.5em;
+}
+
+header nav a:hover{
+    color: var(--teksti);
+    background-color: var(--highligh);
+}
+.ingressi{
+    font-size: 1.2em;
+    font-style: italic;
+    line-height: 1.6em;
+}
+
+.ingressi::first-letter {
+    float: left;
+    font-size: 3.2em;
+    line-height: 1em;
+    font-weight: bold;
+    margin-right: 0.1em;
+}
+/*taulukon rassausta tr=rivi, th=otsikko, td=solu, sarakkeet määritelty html:ssä*/
+table, th, td {
+    border: 1px solid black;
+}
+
+td {
+    width: 15%;
+}
+
+
+
+/*main-lohkon tyylit*/
+main {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    padding-top: 80px;
+}
+
+section{
+    max-width: 1100px;
+    width: 70%;
+    margin: 20px auto;
+}
+/*showcase, jos sellainen syntyy Taustakuvan linkki ei toimi*/
+.showcase{
+    background-image: url('../img/eseduyleiskuva.png');
+    /*color: var(--teksti-vaalea);*/
+    width: 100%;
+    max-width: 100%;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 1.7em;
+    line-height: 1.7em;
+    /*padding-top: 50px;*/
+    /*height: 300px;*/
+}
+
+.showcase > div {
+    color: var(--teksti-vaalea);
+    max-width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+/*testisivulle listojen hiomista*/
+.ammattitaitovaatimukset{
+    padding: 0;
+}
+.ammattitaitovaatimukset > li{
+    list-style-type: none;
+}
+.ammattitaitovaatimukset > li > ul{
+    border-left: var(--highligh) solid 5px;
+}
+.ammattitaitovaatimukset > li > ul li {
+    padding: 0;
+    list-style-type: square;
+}
+
+footer{
+    background-color: var(--bg-dark);
+    color: var(--teksti-vaalea);
+    padding: 40px 0;
+    text-align: center;
+    font-size: 1.2em;
+}
